@@ -34,7 +34,7 @@ function Navbar() {
     },[])
     
   return (
-    <div className='py-5 flex justify-between items-center'>
+    <div className='py-5 sticky px-5 bg-white/60 shadow-lg backdrop-blur-md z-50 top-0 flex justify-between items-center'>
         <h2 className='text-2xl font-bold'>Personal</h2>
         <div className='text-3xl md:hidden cursor-pointer' onClick={() => setIsOpen(true)}>
         <HiBars3BottomRight />
@@ -52,8 +52,8 @@ function Navbar() {
     {userdata.displayName
       ? userdata.displayName.charAt(0).toUpperCase()
       : userdata.email?.charAt(0).toUpperCase()}
-  </div>):""}
-  {/* <span>{admin && (<div>Admin: </div>)}</span> */}
+   </div>):""}
+   {/* <span>{admin && (<div>Admin: </div>)}</span> */}
             <div className='cursor-pointer flex space-x-2' >   <span>{userdata.displayName || userdata.email }</span></div>
             {login?<button className='button-style hidden md:block' onClick={handleLogout} >Logout</button>:<button className='button-style hidden md:block' onClick={()=>navigate("/login")}>Login</button>}
         </div>

@@ -61,8 +61,8 @@ function Home() {
       ) : (
         <>
         <Navbar   />
-          <div>
-            <div className="flex items-center justify-center">
+          <div className="px-5 mt-5">
+            <div className="flex items-center  justify-center">
               <div className="w-full sm:w-1/2 flex-col justify-center">
                 <h2 className="text-3xl md:text-6xl font-bold pb-2">
                   Hy! I Am

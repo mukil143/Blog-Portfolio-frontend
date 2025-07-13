@@ -10,7 +10,7 @@ function App() {
  const[adminlog,setadminlog]=useState(false)
 
   return (
-   <div className="px-5 md:px-10  flex flex-col min-h-screen  py-1  bg-white border rounded-md">
+   <div className="  flex flex-col min-h-screen  py-1  bg-white border rounded-md">
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home adminlog={adminlog} setadminlog={setadminlog}  />}></Route>
