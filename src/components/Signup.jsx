@@ -61,11 +61,11 @@ function Signup() {
   return (
     <>
     {loading?<Loading/>:(<> <Navbar/>
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center  px-5  py-5 md:p-10   bg-gray-100">
       <form
         onSubmit={handleSubmit}
-        className="p-10 bg-white rounded-lg shadow-lg"
-        style={{ width: "70%" }}
+        className="p-5 md:p-10  w-full md:w-2/5 bg-white rounded-lg shadow-lg"
+        style={{  }}
       >
         <h2 className="text-2xl font-bold mb-5 text-gray-800">Sign In</h2>
         <div className="mb-4">

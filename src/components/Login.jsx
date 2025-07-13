@@ -54,8 +54,8 @@ function Login() {
     return (
         <>
 
-        {loading?<Loading/>:(<section className='h-screen' ><Navbar/> <div className="flex justify-center items-center p-10  bg-gray-100">
-            <form onSubmit={handleLogin} className="p-10  bg-white rounded-lg shadow-md" style={{ width: "75%" }}>
+        {loading?<Loading/>:(<section className='' ><Navbar/> <div className="flex justify-center px-5  py-5 items-center   md:p-10  bg-gray-100">
+            <form onSubmit={handleLogin} className="p-5 md:p-10  w-full md:w-2/5   bg-white rounded-lg shadow-md" style={{  }}>
                 <h2 className="text-2xl font-bold mb-5 text-gray-800">Login</h2>
                 <div className="mb-4">
                     <label className="block text-gray-700">Email:</label>

@@ -26,7 +26,7 @@ const Sidenavbar = ({ setIsOpen }) => {
     checkuserlogin();
   }, []);
   return (
-    <div className="fixed top-0 right-0 h-screen w-1/2 bg-white shadow-lg z-50 animate-slideIn md:hidden">
+    <div className="fixed top-0 right-0 h-screen w-7/12  bg-white shadow-lg z-50 animate-slideIn md:hidden">
       <div className="p-6 space-y-4">
         <button
           className="text-red-500 font-bold text-xl"
