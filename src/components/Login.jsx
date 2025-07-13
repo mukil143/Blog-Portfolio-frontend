@@ -36,15 +36,16 @@ function Login() {
         e.preventDefault();
         try{
            const user= await signInWithEmailAndPassword(auth,email,password)
-           console.log("User Loggen in",{user})
-           setloading(false)
+           
            navigate("/")
         }catch(err){
             console.log("Error failed to log in",err)
+        }finally{
+            setloading(false)
         }
 
         // Simulate login process
-        console.log('User logged in:', { email, password });
+        
 
         // Redirect to homepage/dashboard after login
         // Replace '/home' with your homepage route
