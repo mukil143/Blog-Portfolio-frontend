@@ -209,11 +209,14 @@ function Home() {
               {projects.map((project, idx) => (
                 <div key={idx} className="flex flex-col text-center gap-2 " >
                 <span className="text-2xl font-bold" >{project.name}</span>
+                <div className="flex justify-center w-64 h-64">
                 <img
                   src={project.image}
-                  className="w-64 border object-cover  rounded-md cursor-pointer"
+                  className=" max-w-full  border   rounded-md cursor-pointer"
                   alt={project.name}
                 />  
+                </div>
+
                 <a href={project.link} rel="noreferrer" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
               </div>
               ))}
