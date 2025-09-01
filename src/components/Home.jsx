@@ -5,7 +5,7 @@ import CSS from "../assets/css-3.png";
 import HTML from "../assets/html.png";
 import TAILWIND from "../assets/tailwind-css-icon.png";
 import MONGODB from "../assets/mongodb-icon.png";
-import DB from "../assets/data-server.png";
+
 import FIREBASE from "../assets/google-firebase-icon.png";
 import JS from "../assets/js.png";
 import REACTICON from "../assets/physics.png";
@@ -14,6 +14,8 @@ import P1 from "../assets/Bulkmail-projec1.png";
 import P2 from "../assets/Appleclone-P2.png";
 import P3 from "../assets/Nostra-Ecommerce.png";
 import P4 from "../assets/TripAdvisor.png";
+import P5 from "../assets/Client-Project.png";
+import P6 from "../assets/Udemyclone.png";
 import resume from "../assets/resume/Karmukilan-A Resume.pdf";
 import BlogImage from "../assets/blogImage.png";
 import { useNavigate } from "react-router-dom";
@@ -25,6 +27,41 @@ import Loading from "./common/Loading.jsx";
 import HireMeModal from "./HireModel.jsx";
 
 function Home() {
+
+  const projects=[
+    {
+      title:"Client Portfolio",
+      image:P5,
+      link:"https://harish-sadhasivam.vercel.app/"
+    },
+    {
+      title:"Bulkmail",
+      image:P1,
+      link:"https://bulk-mail-mern-rouge.vercel.app/"
+    },
+    {
+      title:"Appleclone",
+      image:P2,
+      link:"https://apple-clone-ui.vercel.app/"
+    },
+    {
+      title:"Ecommerce",
+      image:P3,
+      link:"https://mukil143.github.io/Nostra-Ecommerce-UI/index.html"
+    },
+    {
+      title:"TripAdvisor",
+      image:P4,
+      link:"https://mukil143.github.io/Tripadvisor-clone/"
+    },
+    {
+      title:"Udemyclone",
+      image:P6,
+      link:"https://mukil143.github.io/Udemy-Clone-/"
+    }
+  ]
+
+
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
   const [model,setmodel]=useState(false)
@@ -168,45 +205,20 @@ function Home() {
                 Checkout My Live{" "}
                 <span className="text-orange-400">Projects</span> Here
               </h2>
-              <div className="flex justify-around basis-2/6 my-5  gap-10  flex-col flex-wrap md:flex-row sm:flex-col">
-              <div className="flex flex-col text-center gap-2 " >
-                <span className="text-2xl font-bold" >BulkMail</span>
+              <div className=" max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  items-center justify-around basis-2/6 my-5  gap-10  ">
+              {projects.map((project, idx) => (
+                <div key={idx} className="flex flex-col text-center gap-2 " >
+                <span className="text-2xl font-bold" >{project.name}</span>
                 <img
-                  src={P1}
-                  className="w-64 border rounded-md cursor-pointer"
-                  alt="BulkMail Project"
+                  src={project.image}
+                  className="w-64 border object-cover  rounded-md cursor-pointer"
+                  alt={project.name}
                 />  
-                <a href="https://bulk-mail-mern-rouge.vercel.app/" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
+                <a href={project.link} rel="noreferrer" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
               </div>
-              <div className="flex flex-col text-center gap-2 " >
-                <span className="text-2xl font-bold" >Apple-UI/UX</span>
-
-                <img
-                  src={P2}
-                  className="w-64 border rounded-md cursor-pointer"
-                  alt="Apple UI/UX Project"
-                />
-                <a href="https://apple-clone-ui.vercel.app/" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
-              </div>
-              <div className="flex flex-col text-center gap-2 " >
-                <span className="text-2xl font-bold " >E-Commerce-MERN</span>
-                <img
-                  src={P3}
-                  className="w-64 border rounded-md cursor-pointer"
-                  alt="Nostra E-Commerce Project"
-                />
-                <a href="https://mukil143.github.io/Nostra-Ecommerce-UI/index.html" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
-              </div>
-              <div className="flex flex-col text-center gap-2 " >
-                <span className="text-2xl font-bold " >TripAdvisor-clone</span>
-                <img
-                  src={P4}
-                  className="w-64 border rounded-md cursor-pointer"
-                  alt="TripAdvisor Clone Project"
-                />
-                <a href="https://mukil143.github.io/Tripadvisor-clone/" target="_blank" ><button className="button-style" >🔗Live demo</button></a>
-              </div>
-
+              ))}
+             
+              
               </div>
             </div>
 
