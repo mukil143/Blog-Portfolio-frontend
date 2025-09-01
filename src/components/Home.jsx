@@ -16,6 +16,7 @@ import P3 from "../assets/Nostra-Ecommerce.png";
 import P4 from "../assets/TripAdvisor.png";
 import P5 from "../assets/Client-Project.png";
 import P6 from "../assets/Udemyclone.png";
+import P7 from "../assets/Trende.png";
 import resume from "../assets/resume/Karmukilan-A Resume.pdf";
 import BlogImage from "../assets/blogImage.png";
 import { useNavigate } from "react-router-dom";
@@ -33,6 +34,11 @@ function Home() {
       title:"Client Portfolio",
       image:P5,
       link:"https://harish-sadhasivam.vercel.app/"
+    },
+    {
+      title:"Trende",
+      image:P7,
+      link:"https://trend-ecommerce-frontend.vercel.app/"
     },
     {
       title:"Bulkmail",
@@ -212,7 +218,7 @@ function Home() {
                 <div className="flex justify-center w-64 h-64">
                 <img
                   src={project.image}
-                  className=" max-w-full  border   rounded-md cursor-pointer"
+                  className=" max-w-full  border object-cover   rounded-md cursor-pointer"
                   alt={project.name}
                 />  
                 </div>
